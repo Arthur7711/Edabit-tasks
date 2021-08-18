@@ -13,5 +13,4 @@ function steps(step, sum = 6) {
   step = step - 1;
   return steps(step, sum);
 }
-
 console.log(steps(87));
