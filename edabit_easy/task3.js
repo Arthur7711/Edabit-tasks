@@ -9,5 +9,4 @@ function analogy2(num1, num2) {
   let result = num1 * 2 ** num2;
   return result;
 }
-
 console.log(analogy2(4, 3));
