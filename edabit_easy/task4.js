@@ -6,5 +6,4 @@ function minMax(arr) {
   let minMaxArr = [min, max];
   return minMaxArr;
 }
-
 console.log(minMax([1, 4, 9, 7]));
