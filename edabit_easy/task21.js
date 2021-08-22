@@ -3,12 +3,10 @@
 // Return an empty array if the input array is empty
 
 function sortByLength(arr) {
-  let arr2 = [];
-  if (arr.length < 1) {
-    return arr2;
-  }
-  let byLength = arr.map((el) => el.length);
-  return byLength;
+  const newArr = arr.sort((a, b) => a.length - b.length);
+  return newArr;
 }
 
-console.log(sortByLength(["askcn", "cdn", "k"]));
+const array = ["hello", "hi", "water", "pop"];
+
+console.log(sortByLength(array));
