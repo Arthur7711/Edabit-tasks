@@ -1,5 +1,3 @@
-for (var a = [], i = 0; i < 40; ++i) a[i] = i;
-
 function shuffle(array) {
   let tmp,
     current,
