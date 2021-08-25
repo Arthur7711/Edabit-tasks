@@ -28,5 +28,6 @@ function quickSort(arr) {
   }
   return quickSort(left).concat(base, quickSort(right));
 }
-let items = [5, 3, 7, 6, 2, 9];
-console.log(quickSort(items));
+console.log(quickSort([1, 5, 3, 6, 7]));
+
+
