@@ -5,7 +5,6 @@ function mergeSort(arr) {
   let mid = Math.floor(arr.length / 2),
     left = arr.slice(0, mid),
     right = arr.slice(mid);
-
   return merge(mergeSort(left), mergeSort(right));
 }
 
@@ -18,8 +17,9 @@ function merge(left, right) {
       result.push(right.shift());
     }
   }
-  /* Either left/right array will be empty or both */
   return [...result, ...left, ...right];
 }
 
 console.log(mergeSort([5, 3, 8, 10, 4, 1]));
+
+
