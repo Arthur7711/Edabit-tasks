@@ -21,5 +21,3 @@ function merge(left, right) {
 }
 
 console.log(mergeSort([5, 3, 8, 10, 4, 1]));
-
-
