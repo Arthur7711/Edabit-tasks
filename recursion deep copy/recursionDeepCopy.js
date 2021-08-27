@@ -1,11 +1,11 @@
 function getChildren(t) {
   //   console.log(t.child.length);
-  if (t.child.length === 0) {
+  if (t.child === undefined) {
     return;
   }
   t.child.forEach((child) => {
     console.log(child.name);
-    getChildren(child);
+   return getChildren(child);
   });
 }
 
