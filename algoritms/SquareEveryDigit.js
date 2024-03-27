@@ -3,7 +3,5 @@
 // squareDigits(2483) ➞ 416649
 // squareDigits(3212) ➞ 9414
 function squareDigits(n) {
-    return  Number(n.toString()
-    .split("")
-    .reduce((acc, el) => (acc += (Number(el)*Number(el))), ""))
+    return parseInt(String(n).split('').map(x => parseInt(x)**2).join(''))
 }
