@@ -16,7 +16,7 @@ function convert(deg) {
       return ((dig * 9) / 5 + 32).toFixed(0);
     }
   } else {
-    throw new Error("wrong data");
+    return "Error";
   }
 }
 console.log(convert("19°F"));
