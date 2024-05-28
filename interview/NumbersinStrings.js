@@ -17,3 +17,21 @@ function numInStr(arr) {
 console.log(numInStr(["1a", "a", "2b", "b"]));
 console.log(numInStr(["abc", "abc10"]));
 console.log(numInStr(["abc", "ab10c", "a10bc", "bcd"]));
+
+// Bonus: Try solving this without RegEx.
+
+function numInStrWithoutRegex(arr) {
+  const result = [];
+  arr.forEach((el) => {
+    for (let i = 0; i < el.length; i++) {
+      const element = el[i];
+      if (Number.isNaN(Number(element))) {
+        result.push(el);
+      }
+    }
+  });
+  return result;
+}
+console.log(numInStr(["1a", "a", "2b", "b"]));
+console.log(numInStr(["abc", "abc10"]));
+console.log(numInStr(["abc", "ab10c", "a10bc", "bcd"]));
