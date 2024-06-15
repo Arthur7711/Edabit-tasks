@@ -1,7 +1,7 @@
 // // Write a function that takes a string input and returns the string in a reversed case and order.
 // No empty strings and will neither contain special characters nor punctuation.
 // invert("dLROW YM sI HsEt") ➞ "TeSh iS my worlD"
-// invert("ytInIUgAsnOc") ➞ "CoNSaGuiNiTY"
+// invert("ytInIUgAsnOc") ➞ "CoNSaGuiNiTY".
 // invert("step on NO PETS") ➞ "step on NO PETS"
 // invert("XeLPMoC YTiReTXeD") ➞ "dExtErIty cOmplEx"
 function invert(s) {
@@ -16,4 +16,4 @@ function invert(s) {
   }
   return result;
 }
-console.log(invert("XeLPMoC YTiReTXeD"));
+console.log(invert("XeLPMoC YTiReTXeD")); 
