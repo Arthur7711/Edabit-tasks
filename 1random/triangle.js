@@ -11,7 +11,7 @@
 
 function triangle(num) {
   let result = 0;
-  if (num) {
+  if (num && num >= 0) {
     for (let i = 1; i <= num; i++) {
       result += i;
     }
