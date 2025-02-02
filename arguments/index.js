@@ -1,4 +1,5 @@
 function arrayFromArguments() {
+  // arguments type is Iterables collection ((array like object))
   return Array.from(arguments);
 }
 
