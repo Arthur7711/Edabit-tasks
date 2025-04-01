@@ -7,14 +7,20 @@
 // In JavaScript, despite the specific challenge the results are proofed, the method used to calculate if an integer greater of 2 ** 53 - 1 is a Sastry number can lead to errors due to the approximation of the JS engine.
 
 // Examples
-isSastry(183) //➞ true
+console.log(isSastry(183)); //➞ true
 // Concatenation of n and its successor = 183184
 // 183184 is a perfect square (428 ^ 2)
 
-isSastry(184) //➞ false
+console.log(isSastry(184)); //➞ false
 // Concatenation of n and its successor = 184185
 // 184185 is not a perfect square
 
-isSastry(106755) //➞ true
+console.log(isSastry(106755)); //➞ true
 // Concatenation of n and its successor = 106755106756
 // 106755106756 is a perfect square (326734 ^ 2)
+
+function isSastry(num) {
+  const fullNum = Number(String(num) + (num + 1));
+  const sqrtNum = Math.sqrt(fullNum);
+  return sqrtNum - Math.floor(sqrtNum) === 0;
+}
