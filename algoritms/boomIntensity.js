@@ -19,6 +19,19 @@ console.log(boomIntensity(10)); //➞ "BOOOOOOOOOOM!"
 // There are 10 "o"s and 10 is divisible by 2 and 5 (all caps and exclamation mark included)
 
 function boomIntensity(num) {
+  letterO = "o";
+  if (num < 2) {
+    return "boom";
+  } else if (num % 2 === 0 && num % 5 !== 0) {
+    return `B${letterO.repeat(num)}m!`;
+  } else if (num % 2 !== 0 && num % 5 === 0) {
+    return `B${letterO.repeat(num).toUpperCase()}M`;
+  } else if (num % 2 === 0 && num % 5 === 0) {
+    return `B${letterO.repeat(num).toUpperCase()}M!`;
+  }
+}
+
+function boomIntensityByLoops(num) {
   if (num < 2) {
     return "boom";
   } else if (num % 2 === 0 && num % 5 !== 0) {
