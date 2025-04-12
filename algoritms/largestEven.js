@@ -4,3 +4,13 @@
 console.log(largestEven([3, 7, 2, 1, 7, 9, 10, 13])); // ➞ 10
 console.log(largestEven([1, 3, 5, 7])); // ➞ -1
 console.log(largestEven([0, 19, 18973623])); // ➞ 0
+
+function largestEven(numbers) {
+  let biggestEvenValue = -1;
+  numbers.forEach((num) => {
+    if (num % 2 === 0 && num > biggestEvenValue) {
+      biggestEvenValue = num;
+    }
+  });
+  return biggestEvenValue
+}
