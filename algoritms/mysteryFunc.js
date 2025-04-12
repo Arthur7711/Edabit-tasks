@@ -8,3 +8,6 @@ console.log(mysteryFunc(832)); //➞ 48
 console.log(mysteryFunc(19)); //➞ 9
 console.log(mysteryFunc(133)); //➞ 9
 
+function mysteryFunc(num) {
+  return String(num).split('').reduce((cur,next) => cur*=next)  
+}
