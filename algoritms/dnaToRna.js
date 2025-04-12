@@ -7,3 +7,24 @@
 console.log(dnaToRna("ATTAGCGCGATATACGCGTAC")); //➞ "UAAUCGCGCUAUAUGCGCAUG"
 console.log(dnaToRna("CGATATA")); //➞ "GCUAUAU"
 console.log(dnaToRna("GTCATACGACGTA")); //➞ "CAGUAUGCUGCAU"
+
+function dnaToRna(dna) {
+    let result = ''
+    const changLetters = (letter) => {
+        switch (letter) {
+            case 'A':
+                return 'U'
+            case 'T':
+                return 'A'
+            case 'G':
+                return 'C'
+            case 'C':
+                return 'G'
+        }
+    }
+    dna.split('').forEach(el => {
+        const value = changLetters(el)
+        result+=value
+    })
+    return result
+}
