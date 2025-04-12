@@ -9,3 +9,12 @@
 console.log(alphNum("XYZ")); // ➞ "23 24 25"
 console.log(alphNum("ABCDEF")); // ➞ "0 1 2 3 4 5"
 console.log(alphNum("JAVASCRIPT")); // ➞ "9 0 21 0 18 2 17 8 15 19"
+
+function alphNum(letters) {
+  let result = "";
+  for (let i = 0; i < letters.length; i++) {
+    const el = letters[i];
+    result += `${el.charCodeAt() - 65} `;
+  }
+  return result;
+}
