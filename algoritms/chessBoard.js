@@ -1,8 +1,8 @@
 // Create a function that takes a chess board square's coordinate and return its color.
 // Examples
 console.log(chessBoard("a1")); //➞ "black"
-// console.log(chessBoard("e5")); //➞ "black"
-// console.log(chessBoard("d1")); //➞ "white"
+console.log(chessBoard("e5")); //➞ "black"
+console.log(chessBoard("d1")); //➞ "white"
 
 function chessBoard(possition) {
   const digits = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -18,5 +18,5 @@ function chessBoard(possition) {
     });
     return possitionsArray;
   });
-  return boardPossitions;
+  return boardPossitions.flat(1).find(el => el.possitionName ===possition)?.color;
 }
