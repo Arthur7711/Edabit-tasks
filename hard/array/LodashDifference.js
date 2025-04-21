@@ -6,5 +6,11 @@
 // [values] (...Array): The any number of arrays containing the values to exclude.
 // Returns
 // (Array): Returns the new array of filtered values.
-difference([2, 1], [2, 3]); // => [1]
-difference(["banana", "orange", "apple"], ["orange", "apple"]); // => ["banana"]
+console.log(difference([2, 1], [2, 3])); // => [1]
+console.log(difference(["banana", 55, "orange", "apple"], ["orange", "apple"])); // => ["banana"]
+
+function difference(checkingArray, includedArray) {
+  const includedSet = new Set(includedArray);
+  const result = checkingArray.filter((el) => !includedSet.has(el));
+  return result;
+}
