@@ -5,3 +5,21 @@
 console.log(sockMerchant([10, 20, 20, 10, 10, 30, 50, 10, 20])); // ➞ 3
 console.log(sockMerchant([50, 20, 30, 90, 30, 20, 50, 20, 90])); //➞ 4
 console.log(sockMerchant([])); //➞ 0
+
+function sockMerchant(colors) {
+  if (!colors.length) {
+    return 0;
+  }
+  const colorsWithCounting = new Map();
+  let count = 0;
+  colors.forEach((el) => {
+    if (colorsWithCounting.has(el)) {
+      colorsWithCounting.set(el, colorsWithCounting.get(el) + 1);
+    } else {
+      colorsWithCounting.set(el, 1);
+    }
+  });
+  colorsWithCounting.forEach((el) => (count += Math.floor(el / 2)));
+
+  return count;
+}
