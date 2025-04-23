@@ -12,6 +12,21 @@
 // Notes
 // [5, 5, 5] (triple identical digits) is NOT considered a boomerang because the middle digit is identical to the first and last.
 // Examples
-countBoomerangs([9, 5, 9, 5, 1, 1, 1]); // ➞ 2
-countBoomerangs([5, 6, 6, 7, 6, 3, 9]); // ➞ 1
-countBoomerangs([4, 4, 4, 9, 9, 9, 9]); // ➞ 0
+console.log(countBoomerangs([9, 5, 9, 5, 1, 1, 1])); // ➞ 2
+console.log(countBoomerangs([5, 6, 6, 7, 6, 3, 9])); // ➞ 1
+console.log(countBoomerangs([4, 4, 4, 9, 9, 9, 9])); // ➞ 0
+
+function countBoomerangs(params) {
+  if (!params.length) return 0;
+
+  const results = [];
+  for (let i = 1; i < params.length; i++) {
+    const presEl = params[i - 1];
+    const el = params[i];
+    const nextEl = params[i + 1];
+    if (presEl === nextEl && presEl !== el) {
+      results.push([presEl, nextEl, el]);
+    }
+  }
+  return { results, length: results.length };
+}
