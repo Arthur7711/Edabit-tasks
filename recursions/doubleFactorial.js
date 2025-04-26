@@ -12,6 +12,17 @@ console.log(doubleFactorial(2)); // ➞ 2
 console.log(doubleFactorial(9)); // ➞ 945
 console.log(doubleFactorial(14)); // ➞ 645120
 
+function fastDoubleFactorial(num, result = 1) {
+  if (num <= 1) {
+    return result;
+  }
+  let total = 1;
+  for (let i = num; i > 0; i -= 2) {
+    total *= i;
+  }
+  return total
+}
+
 function doubleFactorial(num, result = 1) {
   if (num <= 1) {
     return result;
