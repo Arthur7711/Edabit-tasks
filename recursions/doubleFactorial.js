@@ -11,3 +11,11 @@ console.log(doubleFactorial(0)); // ➞ 1
 console.log(doubleFactorial(2)); // ➞ 2
 console.log(doubleFactorial(9)); // ➞ 945
 console.log(doubleFactorial(14)); // ➞ 645120
+
+function doubleFactorial(num, result = 1) {
+  if (num <= 1) {
+    return result;
+  }
+  const total = num * result;
+  return doubleFactorial(num-2, total)
+}
