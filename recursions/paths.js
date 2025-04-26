@@ -15,10 +15,19 @@ console.log(paths(1)); // ➞ 1
 console.log(paths(9)); // ➞ 362880
 
 // fastest way
-function paths(num) {
+function fastestPaths(num) {
   let result = 1;
   for (let i = 1; i <= num; i++) {
     result *= i;
   }
-  return result
+  return result;
+}
+
+// recursion verion
+function paths(num, total = 1) {
+  if (num <= 1) {
+    return total;
+  }
+  const val = num * total;
+  return paths(num - 1, val);
 }
