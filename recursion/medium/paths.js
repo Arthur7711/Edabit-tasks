@@ -12,8 +12,12 @@
 // Inspired by a video from Dr. Peter Uelkes.
 // This challenge is describing a factorial.
 // Examples
-paths(4) //➞ 24
+console.log(paths(4)); //➞ 24
+console.log(paths(1)); //➞ 1
+console.log(paths(9)); //➞ 362880
 
-paths(1) //➞ 1
-
-paths(9) //➞ 362880
+function paths(n, data = 1) {
+  if (n <= 1) return data;
+    data *= n;
+  return paths(n - 1, data);
+}
