@@ -8,7 +8,11 @@
 // An empty array should return 0.
 
 // Examples
-console.log(getLength([1, [2, 3]])) // ➞ 3
-console.log(getLength([1, [2, [3, 4]]])) // ➞ 4
-console.log(getLength([1, [2, [3, [4, [5, 6]]]]])) // ➞ 6
-console.log(getLength([1, [2], 1, [2], 1])) // ➞ 5
+console.log(getLength([1, [2, 3]])); // ➞ 3
+console.log(getLength([1, [2, [3, 4]]])); // ➞ 4
+console.log(getLength([1, [2, [3, [4, [5, 6]]]]])); // ➞ 6
+console.log(getLength([1, [2], 1, [2], 1])); // ➞ 5
+
+function getLength (parameters) {
+    return parameters.flat(Infinity).length
+}
