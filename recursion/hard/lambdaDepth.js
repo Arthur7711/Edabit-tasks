@@ -7,7 +7,14 @@
 // All non-example test cases come in two forms: checking whether lambda_depth(k), after being called k times, returns a string, and checking whether lambda_depth(k) returns a function.
 
 // Examples
-console.log(lambdaDepth(0)) // ➞ "edabit"
-console.log(lambdaDepth(1)()) // ➞ "edabit"
-console.log(lambdaDepth(2)()()) // ➞ "edabit"
-console.log(typeof lambdaDepth(2)()) // ➞ "function"
+console.log(lambdaDepth(0)); // ➞ "edabit"
+console.log(lambdaDepth(1)()); // ➞ "edabit"
+console.log(lambdaDepth(2)()()); // ➞ "edabit"
+console.log(typeof lambdaDepth(2)()); // ➞ "function"
+
+function lambdaDepth(n) {
+  if (n === 0) return "edabit";
+  return function () {
+    return lambdaDepth(n - 1);
+  };
+}
