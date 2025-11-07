@@ -127,7 +127,17 @@
 
 // Examples
 function num_of_digits(num) {
-    return `${num}`.split('').length
+  // v1
+  // return `${num}`.split('').length
+
+  // v2
+  let count = 1;
+  if (num >= 10) {
+    for (let i = 10; i <= num; i *= 10) {
+      count++;
+    }
+  }
+  return count;
 }
 console.log(num_of_digits(1000)); // ➞ 4
 
