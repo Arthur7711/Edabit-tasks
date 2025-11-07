@@ -46,12 +46,45 @@
 // Expect only positive integer inputs.
 
 // Examples
-function possibleBonus(a, b) {
-    const dif = (b - a)
-    return b > a && dif>=1 && dif<=6
+// function possibleBonus(a, b) {
+//     const dif = (b - a)
+//     return b > a && dif>=1 && dif<=6
+// }
+// console.log(possibleBonus(3, 7)) //➞ true
+
+// console.log(possibleBonus(1, 9)) //➞ false
+
+// console.log(possibleBonus(5, 3)) //➞ false
+
+// 4)
+// Right Shift by Division
+// The right shift operation is similar to floor division by powers of two.
+
+// Sample calculation using the right shift operator ( >> ):
+
+// 80 >> 3 = floor(80/2^3) = floor(80/8) = 10
+// -24 >> 2 = floor(-24/2^2) = floor(-24/4) = -6
+// -5 >> 1 = floor(-5/2^1) = floor(-5/2) = -3
+// Write a function that mimics (without the use of >>) the right shift operator and returns the result from the two given integers.
+
+// Notes
+// There will be no negative values for the second parameter y.
+// This challenge is more like recreating of the right shift operation, thus, the use of the operator directly is prohibited.
+// Alternatively, you can solve this challenge via recursion.
+
+// Examples
+
+function shiftToRight(a, b) {
+  return Math.floor(a / 2 ** b);
 }
-console.log(possibleBonus(3, 7)) //➞ true
+console.log(shiftToRight(80, 3)); //➞ 10
 
-console.log(possibleBonus(1, 9)) //➞ false
+console.log(shiftToRight(-24, 2)); //➞ -6
 
-console.log(possibleBonus(5, 3)) //➞ false
+console.log(shiftToRight(-5, 1)); //➞ -3
+
+console.log(shiftToRight(4666, 6)); //➞ 72
+
+console.log(shiftToRight(3777, 6)); //➞ 59
+
+console.log(shiftToRight(-512, 10)); //➞ -1
