@@ -109,11 +109,30 @@
 // No rounding is needed.
 
 // Examples
-function perimeter(letter, num) {
-  return (letter === "s") * 4 * num + (letter === "c") * 6.28 * num;
+// function perimeter(letter, num) {
+//   return (letter === "s") * 4 * num + (letter === "c") * 6.28 * num;
+// }
+// console.log(perimeter("s", 7)); //➞ 28
+
+// console.log(perimeter("c", 4)); //➞ 25.12
+
+// console.log(perimeter("c", 9)); //➞ 56.52
+
+// 6)
+
+// Find Number of Digits in Number
+// Create a function that will return an integer number corresponding to the amount of digits in the given integer num.
+// Notes
+// Try to solve this challenge without using strings!
+
+// Examples
+function num_of_digits(num) {
+    return `${num}`.split('').length
 }
-console.log(perimeter("s", 7)); //➞ 28
+console.log(num_of_digits(1000)); // ➞ 4
 
-console.log(perimeter("c", 4)); //➞ 25.12
+console.log(num_of_digits(12)); // ➞ 2
 
-console.log(perimeter("c", 9)); //➞ 56.52
+console.log(num_of_digits(1305981031)); //➞ 10
+
+console.log(num_of_digits(0)); // ➞ 1
