@@ -126,23 +126,40 @@
 // Try to solve this challenge without using strings!
 
 // Examples
-function num_of_digits(num) {
-  // v1
-  // return `${num}`.split('').length
+// function num_of_digits(num) {
+//   // v1
+//   // return `${num}`.split('').length
 
-  // v2
-  let count = 1;
-  if (num >= 10) {
-    for (let i = 10; i <= num; i *= 10) {
-      count++;
-    }
-  }
-  return count;
+//   // v2
+//   let count = 1;
+//   if (num >= 10) {
+//     for (let i = 10; i <= num; i *= 10) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(num_of_digits(1000)); // ➞ 4
+
+// console.log(num_of_digits(12)); // ➞ 2
+
+// console.log(num_of_digits(1305981031)); //➞ 10
+
+// console.log(num_of_digits(0)); // ➞ 1
+
+// 7)
+
+// Burglary Series (04): Add its Name
+// Given three arguments ⁠— an object obj of the stolen items, the pet's name and a value ⁠— return an object with that name and value in it (as key-value pairs).
+
+// Notes
+// The value argument will be a number.
+// Examples
+function addName(obj, name, value) {
+  return { ...obj, [name]: value };
 }
-console.log(num_of_digits(1000)); // ➞ 4
+console.log(addName({}, "Brutus", 300)); //➞ { Brutus: 300 }
 
-console.log(num_of_digits(12)); // ➞ 2
+console.log(addName({ piano: 500 }, "Brutus", 400)); //➞ { piano: 500, Brutus: 400 }
 
-console.log(num_of_digits(1305981031)); //➞ 10
-
-console.log(num_of_digits(0)); // ➞ 1
+console.log(addName({ piano: 500, stereo: 300 }, "Caligula", 440)); //➞ { piano: 500, stereo: 300, Caligula: 440 }
